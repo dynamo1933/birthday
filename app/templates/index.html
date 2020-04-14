@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="homeBack animated zoomIn">
+    <div id="nav">
+        <a href="{{ url_for('login') }}" id="surpriseButton">login to kr </a>
+    </div>
+   <div id="leftImage">
+       <img src="{{ url_for('static',filename='image/hero.png') }}"alt="HeroImage" width=380px height="300px" id="heroImage">
+
+   </div>
+   <div id="rightContent">
+       <p id="header">HAPPY BIRTHDAY <span id="dubbi"> <strong> Meri JAAN </strong></span> !!</p>
+       <p id="description"> I wish I could be there with you. <br>
+           Mai humesha se mummy se milna chahta tha(ek thank you unko bhi)...<br> 
+           Jo bhi h aage please usse dek k bura mat manio agar mane bhi to.....<br> 
+		   To kya thaapad pde ga kich k..... ye symetri kharab ho jaye gi....<br>
+		   (yha pe emogi lgana tha aa nhi rha)
+           </p>
+        <br>
+        <div>
+            <a href="{{ url_for('login') }}" id="seeMoreButton" >Kr to shi login</a>
+        </div>
+   </div>
+</div>
+
+{% endblock %}

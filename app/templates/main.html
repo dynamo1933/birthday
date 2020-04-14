@@ -1,0 +1,98 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="mainPage" id="fullpage">
+    <div class="first section">
+        <div class="wrap" id="wrap">
+            <div class="photo photo_front" id="{% raw %}photo_{{index}}{% endraw %}" onclick="turn(this)">
+                <div class="photo-wrap">
+                    <div class="side side-front">
+                        <p class="image">
+                            <img id="img" src="../static/photo/{% raw %}{{img}}{% endraw %}">
+                        </p>
+                        <p class="caption">{% raw %}{{caption}}{% endraw %}</p>
+                        
+                    </div>
+                    <div class="side side-back">
+                        <p class="desc">{% raw %}{{desc}}{% endraw %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second section">
+        <img src="{{ url_for('static',filename='image/0.png') }}" alt="firstHero" class="heroImages" id="heroImage1">
+        <img src="{{ url_for('static',filename='image/1.png') }}" alt="secondHero" class="heroImages" id="heroImage2">
+        <img src="{{ url_for('static',filename='image/3.png') }}" alt="thirdHero" class="heroImages" id="heroImage3">
+        <div id="message1" class="messageCard">
+            <p id="messageContent">
+               <br><br>I don't know ki tuze yaad bhi h ki nhi.... ye jo h hum pehli baar movie dekne gye the(agar yaad h to movie ka naam btao?) 
+            </p>
+        </div>
+        <div id="message2" class="messageCard">
+            <p id="messageContent">
+                <br><br>Mai ghar jana miss kr diya tha or maine socha nhi tha diwali mera itna dhasuu ho skta h... {just imagin bhabhi or Priya ne kya kha hoga??(nhi wo nhi jo tu soch rhi wo to bilkul nhi...)}
+				</p>
+        </div>
+        <div id="message3" class="messageCard">
+            <p id="messageContent">
+				<br><br>Tum dono hi mere liye bahut hi jyada importent ho re... man to krta h hi ki pakad k rak lu khi janae na du..... Zindgi h...
+            </p>
+        </div>
+    </div>
+
+    <div class="third section">
+        <img src="{{ url_for('static',filename='image/5.png') }}" alt="fourthHero" class="heroImages" id="heroImage1">
+        <img src="{{ url_for('static',filename='image/4.png') }}" alt="fifthHero" class="heroImages" id="heroImage2">
+        <img src="{{ url_for('static',filename='image/6.png') }}" alt="sixthHero" class="heroImages" id="heroImage3">
+        <div id="message1" class="messageCard">
+            <p id="messageContent">
+                <br><br> Ye Prity to tuzse mil k pagal hi ho gyi thi teri kasm bol rhi shadi kr le...<br> or prashant ne kya kya bola tere jane k baad.. I wih ki tuze kabhi pta chale..
+            </p>
+        </div>
+        <div id="message2" class="messageCard">
+            <p id="messageContent">
+                 <br><br> Ye bta skti kon si movie k din ki baat h.....<br> sach me ye din mast tha... <br>
+					tera pta nhi mere ko to faad wala mza aaya tha....
+
+
+				 </p>
+        </div>
+        <div id="message3" class="messageCard">
+            <p id="messageContent">
+                <br><br>Kuch last sookoon k Pal....<br> Kaas waps la pata..
+            </p>
+        </div>
+    </div>
+    <div class="fourth section">
+        <div id="leftInfo">
+            <p id="wordmapText">
+			Kya hum aage mil payenge....<br>
+			Shyad aage mai tuze milu bhi ki na milu....<br>
+			Yaad h na maine bola tha tu mere pass mumbai me rehne ka reson h.....<br>
+			
+			Sorry ye URL mai delete kr dunga.....<br>
+			Ye photos mere pass pta nhi kab tak rhengi...<br>
+			
+			</p>
+        </div>
+        <div id="rightImage">
+                <img  src="{{ url_for('static',filename='image/test.png') }}" alt="Word Cloud" id="wordCloud" data-title="Image Caption" 3 data-group="single"  class="js-lightBox">
+        </div>
+        
+       
+    </div>
+    <div class="fifth section">
+        <a href="{{ url_for('logout') }}" id="logoutLink">LOG OUT</a>
+        <div id="giftTextContainer">
+            
+            <p id="giftText">I have a surprise gift for you...bt abhi kasise du tu aaja wpse</p>
+       <! ––	     <a href="{{ url_for('sendMail') }}" id="giftLink">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}
