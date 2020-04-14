@@ -62,5 +62,5 @@ flask run
 
 
 
-<small>© 2019 Boudhayan Dev.  All rights reserved.</small>
+<small> All rights reserved.</small>
 # birthday_n
